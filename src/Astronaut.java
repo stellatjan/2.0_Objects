@@ -7,15 +7,16 @@ public class Astronaut {
 
     //VARIABLE DECLARATION SECTION
     //Here's where you state which variables you are going to use.
-    public String name;                //holds the name of the hero
+    public String name;
     public int xpos;                //the x position
     public int ypos;                //the y position
-    public int dx;                    //the speed of the hero in the x direction
-    public int dy;                    //the speed of the hero in the y direction
+    public int dx;
+    public int dy;
     public int width;
     public int height;
-    public boolean isAlive;            //a boolean to denote if the hero is alive or dead.
+    public boolean isAlive;
     public Rectangle rec;
+    public boolean isCrashing;
 
     // METHOD DEFINITION SECTION
 
@@ -34,6 +35,7 @@ public class Astronaut {
         height = 60;
         isAlive = true;
         rec = new Rectangle(xpos,ypos,width,height);
+        isCrashing=false;
  
     } // constructor
 
@@ -70,6 +72,8 @@ public class Astronaut {
 
         xpos = xpos + dx;
         ypos = ypos + dy;
+        rec = new Rectangle(xpos,ypos,width,height);
+
 
 
     }
@@ -97,6 +101,8 @@ public class Astronaut {
 
         xpos = xpos + dx;
         ypos = ypos + dy;
+        rec = new Rectangle(xpos,ypos,width,height);
+
     }
 
 }
