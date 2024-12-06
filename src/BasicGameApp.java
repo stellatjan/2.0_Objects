@@ -143,6 +143,7 @@ public class BasicGameApp implements Runnable {
 
 			}
    }
+   //
 
    //Graphics setup method
    private void setUpGraphics() {
